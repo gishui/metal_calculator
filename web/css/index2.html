@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script>
+      $(function() {
+            $('.submit_button').click(function() {
+                var attr=[]
+                attr.push($('.Temperature').val());
+                var t = $(':text').serializeArray();
+                $.each(t, function() {
+                    attr.push(this.value);
+                });
+                //alert(JSON.stringify(attr));
+               alert(attr)
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".param").each(function () {
+                this.value=0;
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".element_sum").attr("value","0");
+    });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".clear").click(function () {
+                var sum=0;
+                $(".param").each(function () {
+                    sum+=this.value;
+                });
+                alert(sum);
+            });
+        });
+    </script>
+</head>
+<body>
+<h1 align="center">Liquid Metals Thermophysical Property Calculator</h1>
+<form>
+<div class="main">
+    <div class="element_input">
+        <table class="normal" align="center" cellpadding="1px" border="1" >
+            <tbody>
+            <tr height="60px">
+                <td valign="center" align="center" width="62"><div>H</div></td>
+                <td></td>
+                <td colspan="2" align="center"><input type="button" class="clear" value="Clear" onclick=""></td>
+                <td colspan="10" class="element_input_text" align="center"><p>composition input(atom %)</p></td>
+                <td colspan="3" align="center"><label class="Sum_text">Sum: </label><input type="number" class="element_sum"></td>
+                <td valign="center" align="center" width="61"><div>He</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="62" class="can"><div>Li</div><input name="1" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Be</div><input name="2" type="number" class="param" size="1"></td>
+                <td colspan="10" rowspan="2"><br></td>
+                <td valign="center" align="center" width="62" class="can"><div>B</div><input name="3" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>C</div><input name="4" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>N</div></td>
+                <td valign="center" align="center" width="64"><div>O</div></td>
+                <td valign="center" align="center" width="61"><div>F</div></td>
+                <td valign="center" align="center" width="61"><div>Ne</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="62" class="can"><div>Na</div><input name="5" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Mg</div><input name="6" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="62" class="can"><div>Al</div><input name="7" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>Si</div><input name="8" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>P</div><input name="9" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>S</div><input name="10" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" ><div>Cl</div></td>
+                <td valign="center" align="center" width="61"><div>Ar</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="62" class="can"><div>K</div><input name="11" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Ca</div><input name="12" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>Sc</div></td>
+                <td valign="center" align="center" width="63" class="can"><div>Ti</div><input name="13" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="59" class="can"><div>V</div><input name="14" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="65" class="can"><div>Cr</div><input name="15" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Mn</div><input name="16" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Fe</div><input name="17" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="57" class="can"><div>Co</div><input name="18" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Ni</div><input name="19" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="59" class="can"><div>Cu</div><input name="20" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Zn</div><input name="21" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="62" class="can"><div>Ga</div><input name="22" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>Ge</div><input name="23" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>As</div></td>
+                <td valign="center" align="center" width="64" class="can"><div>Se</div><input name="24" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>Br</div></td>
+                <td valign="center" align="center" width="61"><div >Kr</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="62" class="can"><div>Rb</div><input name="25" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Sr</div><input name="26" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>Y</div></td>
+                <td valign="center" align="center" width="63" class="can"><div>Zr</div><input name="27" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="59" class="can"><div>Nb</div><input name="28" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="65" class="can"><div>Mo</div><input name="29" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>Tc</div></td>
+                <td valign="center" align="center" width="60" class="can"><div>Ru</div><input name="30" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="57" class="can"><div>Rh</div><input name="31" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Pd</div><input name="32" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="59" class="can"><div>Ag</div><input name="33" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Cd</div><input name="34" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="62" class="can"><div>In</div><input name="35" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>Sn</div><input name="36" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Sb</div><input name="37" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>Te</div><input name="38" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61"><div>I</div></td>
+                <td valign="center" align="center" width="61"><div>Xe</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="62" class="can"><div>Cs</div><input name="39" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Ba</div><input name="40" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" style="font-size: 5px"><div>La-Lu</div></td>
+                <td valign="center" align="center" width="63" class="can"><div>Hf</div><input name="41" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="59" class="can"><div>Ta</div><input name="42" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="65" class="can"><div>W</div><input name="43" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Re</div><input name="44" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Os</div><input name="45" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="57" class="can"><div>Ir</div><input name="46" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Pt</div><input name="47" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="59" class="can"><div>Au</div><input name="48" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="60" class="can"><div>Hg</div><input name="49" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="62" class="can"><div>Tl</div><input name="50" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64" class="can"><div>Pb</div><input name="51" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="61" class="can"><div>Bi</div><input name="52" type="number" class="param" size="1"></td>
+                <td valign="center" align="center" width="64"><div>Po</div></td>
+                <td valign="center" align="center" width="61"><div>At</div></td>
+                <td valign="center" align="center" width="61"><div>Rn</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="62"><div>Fr</div></td>
+                <td valign="center" align="center" width="60"><div>Ra</div></td>
+                <td valign="center" align="center" width="61" style="font-size: 5px"><div>Ac-Lr</div></td>
+                <td valign="center" align="center" width="63"><div>Rf</div></td>
+                <td valign="center" align="center" width="59"><div>Db</div></td>
+                <td valign="center" align="center" width="65"><div>Sg</div></td>
+                <td valign="center" align="center" width="61"><div>Bh</div></td>
+                <td valign="center" align="center" width="60"><div>Hs</div></td>
+                <td valign="center" align="center" width="57"><div>Mt</div></td>
+                <td valign="center" align="center" width="61"><div>Ds</div></td>
+                <td valign="center" align="center" width="59"><div>Rg</div></td>
+                <td valign="center" align="center" width="60"><div>Cn</div></td>
+                <td><br></td>
+                <td colspan="5" align="center"><label class="Temperature_text">Temperatrue(K): </label><input name="0" type="number" class="Temperature" size="3"></td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="others" align="center" cellpadding="2px" border="1" cellspacing="2px">
+            <tbody>
+            <tr>
+                <td valign="center" align="center" width="60"><div>La</div></td>
+                <td valign="center" align="center" width="60"><div>Ce</div></td>
+                <td valign="center" align="center" width="60"><div>Pr</div></td>
+                <td valign="center" align="center" width="60"><div>Nd</div></td>
+                <td valign="center" align="center" width="60"><div>Pm</div></td>
+                <td valign="center" align="center" width="60"><div>Sm</div></td>
+                <td valign="center" align="center" width="60"><div>Eu</div></td>
+                <td valign="center" align="center" width="60"><div>Gd</div></td>
+                <td valign="center" align="center" width="60"><div>Tb</div></td>
+                <td valign="center" align="center" width="60"><div>Dy</div></td>
+                <td valign="center" align="center" width="60"><div>Ho</div></td>
+                <td valign="center" align="center" width="60"><div>Er</div></td>
+                <td valign="center" align="center" width="60"><div>Tm</div></td>
+                <td valign="center" align="center" width="60"><div>Yb</div></td>
+                <td valign="center" align="center" width="60"><div>Lu</div></td>
+            </tr>
+            <tr>
+                <td valign="center" align="center" width="60"><div>Ac</div></td>
+                <td valign="center" align="center" width="60"><div>Th</div></td>
+                <td valign="center" align="center" width="60"><div>Pa</div></td>
+                <td valign="center" align="center" width="60"><div>U</div></td>
+                <td valign="center" align="center" width="60"><div>Np</div></td>
+                <td valign="center" align="center" width="60"><div>Pu</div></td>
+                <td valign="center" align="center" width="60"><div>Am</div></td>
+                <td valign="center" align="center" width="60"><div>Cm</div></td>
+                <td valign="center" align="center" width="60"><div>Bk</div></td>
+                <td valign="center" align="center" width="60"><div>Cf</div></td>
+                <td valign="center" align="center" width="60"><div>Es</div></td>
+                <td valign="center" align="center" width="60"><div>Fm</div></td>
+                <td valign="center" align="center" width="60"><div>Md</div></td>
+                <td valign="center" align="center" width="60"><div>No</div></td>
+                <td valign="center" align="center" width="60"><div>Lr</div></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="calculate_div"><input type="submit" value="calculate" class="submit_button"></div>
+    </div>
+
+    <div class="result_region">
+        <p class="result_title">Results</p>
+        <p class="Property_Density">Density(g/cm³):</p>
+        <input type="number" class="Density" readonly="readonly">
+        <p class="Property_Viscosity">Viscosity(mPa·s):</p>
+        <input type="number" class="Viscosity" readonly="readonly">
+    </div>
+    <div class="info">
+        <p class="About_Title">About</p><br>
+        <p class="About">Some infomation about this</p>
+    </div>
+
+</div>
+</form>
+</body>
+
+</html>

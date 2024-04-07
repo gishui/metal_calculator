@@ -1,0 +1,136 @@
+.main{
+    alignment: center;
+    display: grid;
+    width: 1340px;
+    height:1000px;
+    grid-template-columns:1340px;
+    grid-template-rows: 600px ;
+}
+h1{
+    margin: 10px;
+}
+tr{
+    height: 55px;
+    width: 55px;
+}
+td{
+    border-radius: 8px;
+    font-weight: bold;
+    width: 50px;
+}
+.input_text{
+    float: left;
+    size: auto;
+}
+.element_input{
+    margin: 2px;
+    background: aliceblue;
+}
+.info{
+    margin: 1px;
+    background: aliceblue;
+    border-radius: 8px;
+}
+.result_region{
+    margin: 2px;
+    background: beige;
+}
+.element_sum{
+    -webkit-appearance: none !important;
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+.clear{
+    width: 90px;
+    height: 35px;
+    background: #1baeae;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.Temperature_text{
+    text-align: center;
+}
+.Temperature{
+    -webkit-appearance: none !important;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+.element_input_text{
+    font-weight: bold;
+}
+.submit_button{
+    border: none;
+    width: 150px;
+    height: 45px;
+    margin-top: 5px;
+    text-align: center;
+    background: #1baeae;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.result_title{
+    background-color: mediumpurple;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+.About_Title{
+    background-color: yellow;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+.normal{
+    background: aliceblue;
+    border-color: honeydew;
+    border-spacing: 4px;
+}
+.others{
+    background: wheat;
+    border: none;
+
+}
+.param{
+    border: none;
+    -webkit-appearance: none !important;
+    width:50px;
+    background:aliceblue;
+    text-align: center;
+    color: red;
+}
+.can{
+    color: turquoise;
+}
+.result_label{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+textarea{
+    resize: none;
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 2px;
+}
+.re_div{
+    align-items: center;
+}
